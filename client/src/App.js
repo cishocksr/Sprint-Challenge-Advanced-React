@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import Players from "./component/Players";
+import Navbar from "./component/Navbar";
 import "./App.css";
 
 class App extends Component {
@@ -28,6 +29,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Navbar />
         <Players players={this.state.players} />
       </div>
     );

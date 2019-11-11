@@ -1,0 +1,27 @@
+import React from "react";
+import useDarkMode from "../hooks/useDarkMode";
+
+const Navbar = () => {
+  const [darkMode, setDarkMode] = useDarkMode(false);
+
+  const toggleMode = e => {
+    e.preventDefault();
+    setDarkMode(!darkMode);
+  };
+
+  return (
+    <nav className="navbar">
+      <h1>Woman's World Cup</h1>
+      <div className="dark-mode-toggle">
+        <button
+          onClick={toggleMode}
+          className={darkMode ? "toggle toggled" : "toggle"}
+        >
+          Dark Mode
+        </button>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
